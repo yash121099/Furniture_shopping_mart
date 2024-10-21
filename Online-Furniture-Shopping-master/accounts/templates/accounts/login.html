@@ -1,0 +1,2089 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'accounts/bootstrap/scss/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
+
+    <title>Log In</title>
+    <style>
+        .image-container{
+            background: url("{% static 'accounts/card_images/signup.jpg' %}") center no-repeat;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="overlay"></div>
+<!-- scroll to top section -->
+<span class="material-icons scrollUp rounded-0 shadow text-center">keyboard_arrow_up</span>
+<!-- scroll to top section ends here -->
+<!-- navbar for lg starts here -->
+<div class="sticky-top d-lg-block d-none">
+    <nav class="navbar navbar-expand-lg">
+        <a href="/" class="navbar-brand"><h2>pf</h2></a>
+        <div class="collapse navbar-collapse" id="nav_items">
+            <ul class="nav navbar-nav">
+                <div class="list_container_1" id="list_container_1">
+                    <li class="nav-item dropdown" id="nav_list">
+                        <a href="#" class="nav-link" id="dropdown-menus">FURNITURE</a>
+                        <div class="dropdown-menu justify-content-center" aria-labelledby="dropdown-menus"
+                             id="mega-drop_1">
+                            <div class="row">
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Sofas</a>
+                                    <a href="#" class="dropdown-item">1 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">2 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">3 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">Sofa Sets</a>
+                                    <a href="#" class="dropdown-item">Sectional Sofas</a>
+                                    <a href="#" class="dropdown-item">Sofa Cum Beds</a>
+                                    <a href="#" class="dropdown-item">Recliners</a>
+                                    <a href="#" class="dropdown-item">Futons</a>
+                                    <hr>
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Seatings</a>
+                                    <a href="#" class="dropdown-item">Settees</a>
+                                    <a href="#" class="dropdown-item">Benches</a>
+                                    <a href="#" class="dropdown-item">Chaise Loungers</a>
+                                    <a href="#" class="dropdown-item">Ottomans</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Chairs</a>
+                                    <a href="#" class="dropdown-item">Arm Chairs</a>
+                                    <a href="#" class="dropdown-item">Rocking Chairs</a>
+                                    <a href="#" class="dropdown-item">Lounge Chairs</a>
+                                    <a href="#" class="dropdown-item">Iconic Chairs</a>
+                                    <a href="#" class="dropdown-item">Slipper Chairs</a>
+                                    <a href="#" class="dropdown-item">Barrel Chairs</a>
+                                    <a href="#" class="dropdown-item">Cantilever Chairs</a>
+                                    <a href="#" class="dropdown-item">Folding Chairs</a>
+                                    <a href="#" class="dropdown-item">Plastic Chairs</a>
+                                    <a href="#" class="dropdown-item">Wing Chairs</a>
+                                    <a href="#" class="dropdown-item">Office Chairs</a>
+                                    <a href="#" class="dropdown-item">Patio Chairs</a>
+                                    <a href="#" class="dropdown-item">Cafe Chairs</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Beds</a>
+                                    <a href="#" class="dropdown-item">Single Beds</a>
+                                    <a href="#" class="dropdown-item">Queen Size Beds</a>
+                                    <a href="#" class="dropdown-item">King Size Beds</a>
+                                    <a href="#" class="dropdown-item">Upholstered Beds</a>
+                                    <a href="#" class="dropdown-item">Poster Beds</a>
+                                    <a href="#" class="dropdown-item">Bunk Beds</a>
+                                    <a href="#" class="dropdown-item">Trundle Beds</a>
+                                    <a href="#" class="dropdown-item">Folding Beds</a>
+                                    <a href="#" class="dropdown-item">Sofa Cum Beds</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Tables</a>
+                                    <a href="#" class="dropdown-item">Tables</a>
+                                    <a href="#" class="dropdown-item">Coffee Tables</a>
+                                    <a href="#" class="dropdown-item">Coffee Table Sets</a>
+                                    <a href="#" class="dropdown-item">End Tables</a>
+                                    <a href="#" class="dropdown-item">Nest of Table</a>
+                                    <a href="#" class="dropdown-item">Console Tables</a>
+                                    <a href="#" class="dropdown-item">Portable Tables</a>
+                                    <a href="#" class="dropdown-item">Study Tables</a>
+                                    <a href="#" class="dropdown-item">Dressing Tables</a>
+                                    <a href="#" class="dropdown-item">Bedside Tables</a>
+                                    <a href="#" class="dropdown-item">Office Tables</a>
+                                    <a href="#" class="dropdown-item">Patio Tables & Sets</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Cabinetry</a>
+                                    <a href="#" class="dropdown-item">Shoe Racks</a>
+                                    <a href="#" class="dropdown-item">Entertainment Units</a>
+                                    <a href="#" class="dropdown-item">Cabinets</a>
+                                    <a href="#" class="dropdown-item">Sideboards</a>
+                                    <a href="#" class="dropdown-item">Hutch Cabinets</a>
+                                    <a href="#" class="dropdown-item">Book Shelves</a>
+                                    <a href="#" class="dropdown-item">Book Cases</a>
+                                    <a href="#" class="dropdown-item">Trunks</a>
+                                    <a href="#" class="dropdown-item">Wardrobes</a>
+                                    <a href="#" class="dropdown-item">Modular Wardrobes</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_1">Dining & Bars</a>
+                                    <a href="#" class="dropdown-item">Dining Bars</a>
+                                    <a href="#" class="dropdown-item">Dining Tables</a>
+                                    <a href="#" class="dropdown-item">Dining Sets</a>
+                                    <a href="#" class="dropdown-item">Dining Chairs</a>
+                                    <a href="#" class="dropdown-item">Bar Cabinets</a>
+                                    <a href="#" class="dropdown-item">Bar Units</a>
+                                    <a href="#" class="dropdown-item">Bar Trolleys</a>
+                                    <a href="#" class="dropdown-item">Wine Racks</a>
+                                    <a href="#" class="dropdown-item">Bar Stools</a>
+                                    <a href="#" class="dropdown-item">Bar Table Sets</a>
+                                    <a href="#" class="dropdown-item">Modular Kitchens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="list_container_2" id="list_container_2">
+                    <li class="nav-item dropdown" id="nav_list">
+                        <a href="#" class="nav-link" id="dropdown-menus">LIVING</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-menus" id="mega-drop_2">
+                            <div class="row">
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Sofas</a>
+                                    <a href="#" class="dropdown-item">1 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">2 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">3 Seater Sofas</a>
+                                    <a href="#" class="dropdown-item">Sofa Sets</a>
+                                    <a href="#" class="dropdown-item">Sectional Sofas</a>
+                                    <a href="#" class="dropdown-item">Sofa Cum Beds</a>
+                                    <a href="#" class="dropdown-item">Recliners</a>
+                                    <a href="#" class="dropdown-item">Futons</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Seatings</a>
+                                    <a href="#" class="dropdown-item">Settees</a>
+                                    <a href="#" class="dropdown-item">Benches</a>
+                                    <a href="#" class="dropdown-item">Chaise Loungers</a>
+                                    <a href="#" class="dropdown-item">Ottomans</a>
+                                    <a href="#" class="dropdown-item">Foot Stools</a>
+                                    <a href="#" class="dropdown-item">Sitting Stools</a>
+                                    <a href="#" class="dropdown-item">Bean Bags</a>
+                                    <a href="#" class="dropdown-item">Bar Stools</a>
+                                    <a href="#" class="dropdown-item">Pouffes</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Chairs</a>
+                                    <a href="#" class="dropdown-item">Arm Chairs</a>
+                                    <a href="#" class="dropdown-item">Rocking Chairs</a>
+                                    <a href="#" class="dropdown-item">Lounge Chairs</a>
+                                    <a href="#" class="dropdown-item">Iconic Chairs</a>
+                                    <a href="#" class="dropdown-item">Slipper Chairs</a>
+                                    <a href="#" class="dropdown-item">Barrel Chairs</a>
+                                    <a href="#" class="dropdown-item">Cantilever Chairs</a>
+                                    <a href="#" class="dropdown-item">Folding Chairs</a>
+                                    <a href="#" class="dropdown-item">Plastic Chairs</a>
+                                    <a href="#" class="dropdown-item">Wing Chairs</a>
+                                    <a href="#" class="dropdown-item">Office Chairs</a>
+                                    <a href="#" class="dropdown-item">Patio Chairs</a>
+                                    <a href="#" class="dropdown-item">Cafe Chairs</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Tables</a>
+                                    <a href="#" class="dropdown-item">Tables</a>
+                                    <a href="#" class="dropdown-item">Coffee Tables</a>
+                                    <a href="#" class="dropdown-item">Coffee Table Sets</a>
+                                    <a href="#" class="dropdown-item">End Tables</a>
+                                    <a href="#" class="dropdown-item">Nest of Table</a>
+                                    <a href="#" class="dropdown-item">Console Tables</a>
+                                    <a href="#" class="dropdown-item">Portable Tables</a>
+                                    <a href="#" class="dropdown-item">Study Tables</a>
+                                    <hr>
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Decor</a>
+                                    <a href="#" class="dropdown-item">Wall Arts</a>
+                                    <a href="#" class="dropdown-item">Mandirs</a>
+                                    <a href="#" class="dropdown-item">Table Decor</a>
+                                    <a href="#" class="dropdown-item">Vasses</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Cabinetry</a>
+                                    <a href="#" class="dropdown-item">Shoe Racks</a>
+                                    <a href="#" class="dropdown-item">Entertainment Units</a>
+                                    <a href="#" class="dropdown-item">Cabinets</a>
+                                    <a href="#" class="dropdown-item">Sideboards</a>
+                                    <a href="#" class="dropdown-item">Hutch Cabinets</a>
+                                    <a href="#" class="dropdown-item">Book Shelves</a>
+                                    <a href="#" class="dropdown-item">Book Cases</a>
+                                    <a href="#" class="dropdown-item">Trunks</a>
+                                    <a href="#" class="dropdown-item">Plastic Cabinets</a>
+                                    <a href="#" class="dropdown-item">Bar Cabinets</a>
+                                    <a href="#" class="dropdown-item">Bar Units</a>
+                                    <a href="#" class="dropdown-item">Bar Trolleys</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_2">Lighting</a>
+                                    <a href="#" class="dropdown-item">Wall Lights</a>
+                                    <a href="#" class="dropdown-item">Table Lamps</a>
+                                    <a href="#" class="dropdown-item">Study Lamps</a>
+                                    <a href="#" class="dropdown-item">Smart Lights</a>
+                                    <a href="#" class="dropdown-item">Hanging Lights</a>
+                                    <a href="#" class="dropdown-item">Table Lamps</a>
+                                    <a href="#" class="dropdown-item">Floor Lamps</a>
+                                    <a href="#" class="dropdown-item">Candle Holders</a>
+                                    <a href="#" class="dropdown-item">Candles</a>
+                                    <a href="#" class="dropdown-item">Flush Mounts</a>
+                                    <a href="#" class="dropdown-item">Panel Lights</a>
+                                    <a href="#" class="dropdown-item">Smart Combos</a>
+                                    <a href="#" class="dropdown-item">Smart Devices</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="list_container_3" id="list_container_3">
+                    <li class="nav-item dropdown" id="nav_list">
+                        <a href="#" class="nav-link" id="dropdown-menus">BEDROOM</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-menus" id="mega-drop_3">
+                            <div class="row">
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Beds</a>
+                                    <a href="#" class="dropdown-item">Single Beds</a>
+                                    <a href="#" class="dropdown-item">Queen Size Beds</a>
+                                    <a href="#" class="dropdown-item">King Size Beds</a>
+                                    <a href="#" class="dropdown-item">Upholstered Beds</a>
+                                    <a href="#" class="dropdown-item">Poster Beds</a>
+                                    <a href="#" class="dropdown-item">Bunk Beds</a>
+                                    <a href="#" class="dropdown-item">Trundle Beds</a>
+                                    <a href="#" class="dropdown-item">Folding Beds</a>
+                                    <a href="#" class="dropdown-item">Sofa Cum Beds</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Mattress</a>
+                                    <a href="#" class="dropdown-item">Single Bed Mattress</a>
+                                    <a href="#" class="dropdown-item">Queen Bed Mattress</a>
+                                    <a href="#" class="dropdown-item">King Bed Mattress</a>
+                                    <a href="#" class="dropdown-item">Foldable Mattress</a>
+                                    <a href="#" class="dropdown-item">Baby Mattress</a>
+                                    <a href="#" class="dropdown-item">Kids Mattress</a>
+                                    <a href="#" class="dropdown-item">Mattress Protectors</a>
+                                    <a href="#" class="dropdown-item">Mattress Toppers</a>
+                                    <a href="#" class="dropdown-item">Pillows</a>
+                                    <a href="#" class="dropdown-item">Bed Wedges</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Furnishings</a>
+                                    <a href="#" class="dropdown-item">Bed Sheets</a>
+                                    <a href="#" class="dropdown-item">Bed Covers</a>
+                                    <a href="#" class="dropdown-item">Bedding Sets</a>
+                                    <a href="#" class="dropdown-item">Duvets</a>
+                                    <a href="#" class="dropdown-item">Quilts & Comforters</a>
+                                    <a href="#" class="dropdown-item">Blankets</a>
+                                    <a href="#" class="dropdown-item">Dohars</a>
+                                    <a href="#" class="dropdown-item">Carpets</a>
+                                    <a href="#" class="dropdown-item">Runners</a>
+                                    <a href="#" class="dropdown-item">Curtains & Drapers</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Decor</a>
+                                    <a href="#" class="dropdown-item">Mirrors</a>
+                                    <a href="#" class="dropdown-item">Photo Frames</a>
+                                    <a href="#" class="dropdown-item">Wall Art</a>
+                                    <a href="#" class="dropdown-item">Table Decor</a>
+                                    <a href="#" class="dropdown-item">Wall Cabinets</a>
+                                    <a href="#" class="dropdown-item">Clocks</a>
+                                    <hr>
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Tables</a>
+                                    <a href="#" class="dropdown-item">Bedside Tables</a>
+                                    <a href="#" class="dropdown-item">Dressing Tables</a>
+                                    <a href="#" class="dropdown-item">Study Tables</a>
+                                </div>
+                                <div class="col-md-2" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Storage</a>
+                                    <a href="#" class="dropdown-item">Wardrobes</a>
+                                    <a href="#" class="dropdown-item">Modular Wardrobes</a>
+                                    <a href="#" class="dropdown-item">Chest of Drawers</a>
+                                    <a href="#" class="dropdown-item">Cabinets</a>
+                                    <a href="#" class="dropdown-item">Entertainment Units</a>
+                                    <a href="#" class="dropdown-item">Trunks</a>
+                                    <a href="#" class="dropdown-item">Book Cases</a>
+                                    <a href="#" class="dropdown-item">Book Shelves</a>
+                                    <a href="#" class="dropdown-item">Plastic Cabinets</a>
+                                </div>
+                                <div class="col-md-2" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_3">Lighting</a>
+                                    <a href="#" class="dropdown-item">Wall Lights</a>
+                                    <a href="#" class="dropdown-item">Table Lamps</a>
+                                    <a href="#" class="dropdown-item">Study Lamps</a>
+                                    <a href="#" class="dropdown-item">Smart Lights</a>
+                                    <a href="#" class="dropdown-item">Hanging Lights</a>
+                                    <a href="#" class="dropdown-item">Table Lamps</a>
+                                    <a href="#" class="dropdown-item">Floor Lamps</a>
+                                    <a href="#" class="dropdown-item">Candle Holders</a>
+                                    <a href="#" class="dropdown-item">Candles</a>
+                                    <a href="#" class="dropdown-item">Flush Mounts</a>
+                                    <a href="#" class="dropdown-item">Panel Lights</a>
+                                    <a href="#" class="dropdown-item">Smart Combos</a>
+                                    <a href="#" class="dropdown-item">Smart Devices</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="list_container_4" id="list_container_4">
+                    <li class="nav-item dropdown" id="nav_list">
+                        <a href="#" class="nav-link" id="dropdown-menus">KIDS ROOM</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-menus" id="mega-drop_4">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Beds</a>
+                                    <a href="#" class="dropdown-item">Cribs</a>
+                                    <a href="#" class="dropdown-item">Panel Beds</a>
+                                    <a href="#" class="dropdown-item">Bunk Beds</a>
+                                    <a href="#" class="dropdown-item">Loft Beds</a>
+                                    <a href="#" class="dropdown-item">Trundle Beds</a>
+                                    <a href="#" class="dropdown-item">Bookcase Beds</a>
+                                    <a href="#" class="dropdown-item">Novelty Beds</a>
+                                    <a href="#" class="dropdown-item">Tent Beds</a>
+                                    <a href="#" class="dropdown-item">Bed Units</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Study</a>
+                                    <a href="#" class="dropdown-item">Study Tables</a>
+                                    <a href="#" class="dropdown-item">Infant Desks</a>
+                                    <a href="#" class="dropdown-item">Activity Tables</a>
+                                    <a href="#" class="dropdown-item">Study Chairs</a>
+                                    <a href="#" class="dropdown-item">Pinboards</a>
+                                    <a href="#" class="dropdown-item">Writing Boards</a>
+                                    <a href="#" class="dropdown-item">Art Easels</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Storage</a>
+                                    <a href="#" class="dropdown-item">Book Shelves</a>
+                                    <a href="#" class="dropdown-item">Book cases</a>
+                                    <a href="#" class="dropdown-item">Storage Cabinets</a>
+                                    <a href="#" class="dropdown-item">Chest of Drawers</a>
+                                    <a href="#" class="dropdown-item">Storage Baskets</a>
+                                    <a href="#" class="dropdown-item">Wardrobes </a>
+                                    <a href="#" class="dropdown-item">Fabric Wardrobes</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Seating</a>
+                                    <a href="#" class="dropdown-item">Study Chairs</a>
+                                    <a href="#" class="dropdown-item">Infant Chairs</a>
+                                    <a href="#" class="dropdown-item">Rockers</a>
+                                    <a href="#" class="dropdown-item">Sofas</a>
+                                    <a href="#" class="dropdown-item">Stools</a>
+                                    <a href="#" class="dropdown-item">Bean Bags </a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Decor</a>
+                                    <a href="#" class="dropdown-item">Wall Shelves</a>
+                                    <a href="#" class="dropdown-item">Wall Arts</a>
+                                    <a href="#" class="dropdown-item">Study Lamps</a>
+                                    <a href="#" class="dropdown-item">Bedside Lamps</a>
+                                    <a href="#" class="dropdown-item">Wall Lights</a>
+                                    <a href="#" class="dropdown-item">Wall Clocks</a>
+                                    <a href="#" class="dropdown-item">Table Clocks</a>
+                                    <a href="#" class="dropdown-item">Wall Stickers</a>
+                                    <a href="#" class="dropdown-item">Posters</a>
+                                    <a href="#" class="dropdown-item">Height Charts</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Bedding</a>
+                                    <a href="#" class="dropdown-item">Baby Wraps</a>
+                                    <a href="#" class="dropdown-item">Bedsheets</a>
+                                    <a href="#" class="dropdown-item">Blankets</a>
+                                    <a href="#" class="dropdown-item">Pillows</a>
+                                    <hr>
+                                    <a href="#" class="dropdown-item" id="sub_heading_4">Furnishings</a>
+                                    <a href="#" class="dropdown-item">Cushion Covers</a>
+                                    <a href="#" class="dropdown-item">Curtains</a>
+                                    <a href="#" class="dropdown-item">Carpets</a>
+                                    <a href="#" class="dropdown-item">Floor Mats</a>
+                                    <a href="#" class="dropdown-item">Towels</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <div class="list_container_5" id="list_container_5">
+                    <li class="nav-item dropdown" id="nav_list">
+                        <a href="#" class="nav-link" id="dropdown-menus">DECOR</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-menus" id="mega-drop_5">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Wall Accents</a>
+                                    <a href="#" class="dropdown-item">Wall Cabinets</a>
+                                    <a href="#" class="dropdown-item">Mirrors</a>
+                                    <a href="#" class="dropdown-item">Clocks</a>
+                                    <a href="#" class="dropdown-item">Screen & Dividers</a>
+                                    <a href="#" class="dropdown-item">Photo Frames</a>
+                                    <a href="#" class="dropdown-item">Key Holders</a>
+                                    <a href="#" class="dropdown-item">Magazine Holders</a>
+                                    <a href="#" class="dropdown-item">Set Top Box Holders</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Wall Arts</a>
+                                    <a href="#" class="dropdown-item">Metal Wall Arts</a>
+                                    <a href="#" class="dropdown-item">Wooden Wall Arts</a>
+                                    <a href="#" class="dropdown-item">Wall Murals</a>
+                                    <a href="#" class="dropdown-item">Wall Plates</a>
+                                    <a href="#" class="dropdown-item">Wall Tiles</a>
+                                    <a href="#" class="dropdown-item">Original Paintings</a>
+                                    <a href="#" class="dropdown-item">Art Panels</a>
+                                    <a href="#" class="dropdown-item">Art Prints</a>
+                                    <a href="#" class="dropdown-item">Ethnic Art</a>
+                                    <a href="#" class="dropdown-item">Wall Masks</a>
+                                    <a href="#" class="dropdown-item">Faux Animal Busts</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Table Decor</a>
+                                    <a href="#" class="dropdown-item">Vases</a>
+                                    <a href="#" class="dropdown-item">Table Clocks</a>
+                                    <a href="#" class="dropdown-item">Table Photo Frames</a>
+                                    <a href="#" class="dropdown-item">Figurines</a>
+                                    <a href="#" class="dropdown-item">Transport Decor</a>
+                                    <a href="#" class="dropdown-item">Nautical Decor</a>
+                                    <a href="#" class="dropdown-item">Monuments Decor</a>
+                                    <a href="#" class="dropdown-item">Vintage Decor</a>
+                                    <a href="#" class="dropdown-item">Military Decor</a>
+                                    <a href="#" class="dropdown-item">Plates & Trays</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Spiritual</a>
+                                    <a href="#" class="dropdown-item">Mandir</a>
+                                    <a href="#" class="dropdown-item">Pooja Shelves</a>
+                                    <a href="#" class="dropdown-item">Religious Idols</a>
+                                    <a href="#" class="dropdown-item">Religious Frames</a>
+                                    <a href="#" class="dropdown-item">Chowkies</a>
+                                    <a href="#" class="dropdown-item">Bells</a>
+                                    <a href="#" class="dropdown-item">Feng Shui</a>
+                                    <a href="#" class="dropdown-item">Pooja Essentials</a>
+                                    <a href="#" class="dropdown-item">Festive Decor</a>
+                                    <a href="#" class="dropdown-item">Prayer Mats</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_even">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Home Garden</a>
+                                    <a href="#" class="dropdown-item">Pots & Planters</a>
+                                    <a href="#" class="dropdown-item">Natural Plants</a>
+                                    <a href="#" class="dropdown-item">Artificial Plants</a>
+                                    <a href="#" class="dropdown-item">Artificial Flowers</a>
+                                    <a href="#" class="dropdown-item">Artificial Grass</a>
+                                    <a href="#" class="dropdown-item">Indoor Fountains</a>
+                                    <a href="#" class="dropdown-item">Decorative Pebbles</a>
+                                    <a href="#" class="dropdown-item">Garden Figurines</a>
+                                    <a href="#" class="dropdown-item">Bird Houses</a>
+                                </div>
+                                <div class="col-md-2 col-sm-12" id="bg_odd">
+                                    <a href="#" class="dropdown-item" id="sub_heading_5">Clearance Sale</a>
+                                    <a href="#" class="dropdown-item">Decor</a>
+                                    <a href="#" class="dropdown-item">Homeware</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+
+        <div class="input-group ml-auto col-md-4" id="input-groups">
+            <input type="text" class="form-control ml-auto" placeholder="Search for brands,colors and more"
+                   id="search_bar">
+            <div class="input-group-append">
+                <button class="input-group-text btn" id="search_bar_button">
+                    <svg width="1em" height="1em" type="submit" viewBox="0 0 16 16" class="bi bi-search"
+                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="person_icon">
+            <button type="button" class="btn ml-auto pt-3 pb-2" id="nav-btn">
+                <a style="color: black;">
+                    <i class="far fa-user"></i>
+                </a>
+                <p class="lead mb-0" id="icon_text">Account</p>
+            </button>
+            <div class="dropdown_for_account shadow" aria-labelledby="dropdown-menus">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="p1">Welcome</p>
+                        <p class="p2">To access account and manage orders</p>
+                        <span class="rounded-0 link_btn"><a href="/accounts/login" class="link">LOGIN</a>/<a
+                                href="/accounts/signup" class="link">SIGNUP</a></span>
+                        <hr>
+                        <a href="#" class="dropdown-item">Orders</a>
+                        <a href="#" class="dropdown-item">Wishlist</a>
+                        <a href="#" class="dropdown-item">Contact Us</a>
+                        <hr>
+                        <a href="#" class="dropdown-item">Gift Cards</a>
+                        <a href="#" class="dropdown-item">Coupons</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn ml-auto pt-4" id="nav-btn">
+            <a href="signup.html" style="color: black;">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+            </a>
+            <p class="lead" id="icon_text">Wishlist</p>
+        </button>
+        <button type="button" class="btn ml-auto pt-4" id="nav-btn">
+            <a href="signup.html" style="color: black;">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+            </a>
+            <p class="lead" id="icon_text">Cart</p>
+        </button>
+    </nav>
+</div>
+<!-- navbar for lg screen ends here -->
+<!-- navbar for screens smaller than lg starts here -->
+<div class="sticky-top d-lg-none d-block">
+    <nav class="navbar shadow">
+        <i class="fas fa-bars" id="menu_btn"></i>
+        <a href="home_page.html" class="navbar-brand mr-auto ml-3" id="navbrand_for_search"><h2>pf</h2></a>
+        <a id="icon_magnify" class="mr-3">
+            <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                <path fill-rule="evenodd"
+                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+        </a>
+        <!--for search button toggle-->
+        <form action="" class="row w-100 ml-0 mr-0 mt-2 mb-2" id="search_animate">
+            <div class="input-group">
+                <div class="input-group-prepend pt-2">
+                        <span>
+                            <svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-search"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd"
+                                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </span>
+                </div>
+                <input type="text" id="focus_input" class="form-control" style="border: none;"
+                       placeholder="Search for products">
+                <div class="input-group-append pt-2">
+                        <span class="material-icons" style="font-size: 30px;cursor: pointer;"
+                              id="cancel_button_for_search">
+                            clear
+                        </span>
+                </div>
+            </div>
+        </form>
+        <!--for search button toggle end here-->
+        <div class="iconss">
+            <a href="signup.html" class="mr-2">
+                <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-heart" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+            </a>
+            <a href="/accounts/signup" class="mr-2">
+                <svg width="1.4em" height="1.4em" viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="menu_general" id="menu">
+            <a href="signup.html">
+                <div class="greeting">
+                    <div class="pt-4 pl-4">
+                        <i class="far fa-user"></i>
+                        <p class="greeting_text mt-3 ml-4 pt-1">Hello, Sign in</p>
+                    </div>
+                </div>
+            </a>
+            <span class="material-icons" id="cancel_btn">clear</span>
+            <ul>
+                <a href="#" id="furniture_right_arrow">
+                    <li class="first_component_ul">Furniture<span class="material-icons">keyboard_arrow_right</span>
+                    </li>
+                </a>
+                <a href="#" id="living_right_arrow">
+                    <li>Living<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="bedroom_right_arrow">
+                    <li>Bedroom<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="kidsroom_right_arrow">
+                    <li>Kids Room<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="decor_right_arrow">
+                    <li>Decor<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#!">
+                    <li>Find a Studio</li>
+                </a>
+                <a href="#!">
+                    <li>Track Your Order</li>
+                </a>
+                <a href="#!">
+                    <li>Return & Refund</li>
+                </a>
+                <a href="#!">
+                    <li>Terms & Conditions</li>
+                </a>
+                <a href="about_page.html">
+                    <li>About Us</li>
+                </a>
+                <a href="#!">
+                    <li>Contact Us</li>
+                </a>
+                <a href="faq.html">
+                    <li>FAQ's</li>
+                </a>
+            </ul>
+        </div>
+        <!--furniture submenu-->
+        <div class="menu_general" id="menu_1">
+            <a href="#" id="left_arrow_1">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Furniture</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#" id="sofas_right_arrow">
+                    <li class="first_component_ul">Sofas<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="chair_right_arrow">
+                    <li>Chairs<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="table_right_arrow">
+                    <li>Tables<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="seating_right_arrow">
+                    <li>Seating<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="beds_right_arrow">
+                    <li>Beds<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="cabinetry_right_arrow">
+                    <li>Cabinetry<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="dining_right_arrow">
+                    <li>Dining & Bars<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+            </ul>
+        </div>
+        <!--sofas submenu-->
+        <div class="menu_general" id="menu_2">
+            <a href="#" id="left_arrow_2">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Sofas</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">1 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>2 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>3 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>Sectional Sofas</li>
+                </a>
+                <a href="#">
+                    <li>Sofa Cum Beds</li>
+                </a>
+                <a href="#">
+                    <li>Recliner</li>
+                </a>
+                <a href="#">
+                    <li>Futons</li>
+                </a>
+            </ul>
+        </div>
+        <!--chairs submenu-->
+        <div class="menu_general" id="menu_3">
+            <a href="#" id="left_arrow_3">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Chairs</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Arm Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Rocking Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Lounge Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Iconic Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Sliper Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Barrel Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Cantilever Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Folding Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Plastic Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Wing Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Office Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Patio Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Cafe Chairs</li>
+                </a>
+            </ul>
+        </div>
+        <!--tables submenu-->
+        <div class="menu_general" id="menu_4">
+            <a href="#" id="left_arrow_4">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Tables</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Tables</li>
+                </a>
+                <a href="#">
+                    <li>Coffee Tables</li>
+                </a>
+                <a href="#">
+                    <li>Coffee Table Sets</li>
+                </a>
+                <a href="#">
+                    <li>End Tables</li>
+                </a>
+                <a href="#">
+                    <li>Nest of Table</li>
+                </a>
+                <a href="#">
+                    <li>Console Tables</li>
+                </a>
+                <a href="#">
+                    <li>Portable Tables</li>
+                </a>
+                <a href="#">
+                    <li>Study Tables</li>
+                </a>
+                <a href="#">
+                    <li>Dressing Tables</li>
+                </a>
+                <a href="#">
+                    <li>Bedside Tables</li>
+                </a>
+                <a href="#">
+                    <li>Office Tables</li>
+                </a>
+                <a href="#">
+                    <li>Patio Table & Sets</li>
+                </a>
+            </ul>
+        </div>
+        <!--seating submenu-->
+        <div class="menu_general" id="menu_5">
+            <a href="#" id="left_arrow_5">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Seating</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Settees</li>
+                </a>
+                <a href="#">
+                    <li>Benches</li>
+                </a>
+                <a href="#">
+                    <li>Chaise Loungers</li>
+                </a>
+                <a href="#">
+                    <li>Ottomans</li>
+                </a>
+                <a href="#">
+                    <li>Recaimers</li>
+                </a>
+                <a href="#">
+                    <li>Foot Stools</li>
+                </a>
+                <a href="#">
+                    <li>Pouffes</li>
+                </a>
+                <a href="#">
+                    <li>Seating Stools</li>
+                </a>
+                <a href="#">
+                    <li>Bean Bags</li>
+                </a>
+                <a href="#">
+                    <li>Swings</li>
+                </a>
+                <a href="#">
+                    <li>Hamrocks</li>
+                </a>
+            </ul>
+        </div>
+        <!--bed submenu-->
+        <div class="menu_general" id="menu_6">
+            <a href="#" id="left_arrow_6">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Beds</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Single Beds</li>
+                </a>
+                <a href="#">
+                    <li>Queen Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>King Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>Upholstered Beds</li>
+                </a>
+                <a href="#">
+                    <li>Poster Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bunk Beds</li>
+                </a>
+                <a href="#">
+                    <li>Trudle Beds</li>
+                </a>
+                <a href="#">
+                    <li>Folding Beds</li>
+                </a>
+                <a href="#">
+                    <li>Sofa Cum Beds</li>
+                </a>
+            </ul>
+        </div>
+        <!--cabinetry submenu-->
+        <div class="menu_general" id="menu_7">
+            <a href="#" id="left_arrow_7">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Cabinetry</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Shoe Racks</li>
+                </a>
+                <a href="#">
+                    <li>Entertainment Units</li>
+                </a>
+                <a href="#">
+                    <li>Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Sideboards</li>
+                </a>
+                <a href="#">
+                    <li>Hutch Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Book Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Book Cases</li>
+                </a>
+                <a href="#">
+                    <li>Trunks</li>
+                </a>
+                <a href="#">
+                    <li>Wardrobes</li>
+                </a>
+                <a href="#">
+                    <li>Modular Wardrobes</li>
+                </a>
+            </ul>
+        </div>
+        <!--Dining & Bars submenu-->
+        <div class="menu_general" id="menu_8">
+            <a href="#" id="left_arrow_8">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Dining & Bars</p>
+            </a>
+            <hr class="hr_for_theme1">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Dining Bars</li>
+                </a>
+                <a href="#">
+                    <li>Dining Tables</li>
+                </a>
+                <a href="#">
+                    <li>Dining Sets</li>
+                </a>
+                <a href="#">
+                    <li>Dining Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Bar Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Bar Units</li>
+                </a>
+                <a href="#">
+                    <li>Bar Trolleys</li>
+                </a>
+                <a href="#">
+                    <li>Wine Racks</li>
+                </a>
+                <a href="#">
+                    <li>Bar Stools</li>
+                </a>
+                <a href="#">
+                    <li>Bar Table Sets</li>
+                </a>
+                <a href="#">
+                    <li>Modular Kitches</li>
+                </a>
+            </ul>
+        </div>
+        <!--Living menu-->
+        <div class="menu_general" id="menu_9">
+            <a href="#" id="left_arrow_9">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Living</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#" id="sofas_right_arrow_1">
+                    <li class="first_component_ul">Sofas<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="seating_right_arrow_1">
+                    <li>Seating<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="table_right_arrow_1">
+                    <li>Tables<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="chair_right_arrow_1">
+                    <li>Chairs<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="beds_right_arrow_1">
+                    <li>Beds<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="Decor_right_arrow">
+                    <li>Decor<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="Lighting_right_arrow">
+                    <li>Lighting<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+            </ul>
+        </div>
+        <!--sofas  submenu-->
+        <div class="menu_general" id="menu_10">
+            <a href="#" id="left_arrow_10">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Sofas</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">1 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>2 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>3 Seater Sofas</li>
+                </a>
+                <a href="#">
+                    <li>Sectional Sofas</li>
+                </a>
+                <a href="#">
+                    <li>Sofa Cum Beds</li>
+                </a>
+                <a href="#">
+                    <li>Recliner</li>
+                </a>
+                <a href="#">
+                    <li>Futons</li>
+                </a>
+            </ul>
+        </div>
+        <!--seating  submenu-->
+        <div class="menu_general" id="menu_11">
+            <a href="#" id="left_arrow_11">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Seating</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Settees</li>
+                </a>
+                <a href="#">
+                    <li>Benches</li>
+                </a>
+                <a href="#">
+                    <li>Chaise Loungers</li>
+                </a>
+                <a href="#">
+                    <li>Ottomans</li>
+                </a>
+                <a href="#">
+                    <li>Recaimers</li>
+                </a>
+                <a href="#">
+                    <li>Foot Stools</li>
+                </a>
+                <a href="#">
+                    <li>Pouffes</li>
+                </a>
+                <a href="#">
+                    <li>Seating Stools</li>
+                </a>
+                <a href="#">
+                    <li>Bean Bags</li>
+                </a>
+                <a href="#">
+                    <li>Swings</li>
+                </a>
+                <a href="#">
+                    <li>Hamrocks</li>
+                </a>
+            </ul>
+        </div>
+        <!--Tables  submenu-->
+        <div class="menu_general" id="menu_12">
+            <a href="#" id="left_arrow_12">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Tables</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Tables</li>
+                </a>
+                <a href="#">
+                    <li>Coffee Tables</li>
+                </a>
+                <a href="#">
+                    <li>Coffee Table Sets</li>
+                </a>
+                <a href="#">
+                    <li>End Tables</li>
+                </a>
+                <a href="#">
+                    <li>Nest of Table</li>
+                </a>
+                <a href="#">
+                    <li>Console Tables</li>
+                </a>
+                <a href="#">
+                    <li>Portable Tables</li>
+                </a>
+                <a href="#">
+                    <li>Study Tables</li>
+                </a>
+                <a href="#">
+                    <li>Dressing Tables</li>
+                </a>
+                <a href="#">
+                    <li>Bedside Tables</li>
+                </a>
+                <a href="#">
+                    <li>Office Tables</li>
+                </a>
+                <a href="#">
+                    <li>Patio Table & Sets</li>
+                </a>
+            </ul>
+        </div>
+        <!--Chairs  submenu-->
+        <div class="menu_general" id="menu_13">
+            <a href="#" id="left_arrow_13">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Chairs</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Arm Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Rocking Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Lounge Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Iconic Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Sliper Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Barrel Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Cantilever Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Folding Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Plastic Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Wing Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Office Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Patio Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Cafe Chairs</li>
+                </a>
+            </ul>
+        </div>
+        <!--bed submenu-->
+        <div class="menu_general" id="menu_14">
+            <a href="#" id="left_arrow_14">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Beds</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Single Beds</li>
+                </a>
+                <a href="#">
+                    <li>Queen Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>King Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>Upholstered Beds</li>
+                </a>
+                <a href="#">
+                    <li>Poster Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bunk Beds</li>
+                </a>
+                <a href="#">
+                    <li>Trudle Beds</li>
+                </a>
+                <a href="#">
+                    <li>Folding Beds</li>
+                </a>
+                <a href="#">
+                    <li>Sofa Cum Beds</li>
+                </a>
+            </ul>
+        </div>
+        <!--decor submenu-->
+        <div class="menu_general" id="menu_15">
+            <a href="#" id="left_arrow_15">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Decor</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Wall Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Wall Arts</li>
+                </a>
+                <a href="#">
+                    <li>Clocks</li>
+                </a>
+                <a href="#">
+                    <li>Mandirs</li>
+                </a>
+                <a href="#">
+                    <li>Table Decor</li>
+                </a>
+                <a href="#">
+                    <li>Vases</li>
+                </a>
+                <a href="#">
+                    <li>Figurines</li>
+                </a>
+                <a href="#">
+                    <li>Photo Frames</li>
+                </a>
+                <a href="#">
+                    <li>Key Holders</li>
+                </a>
+            </ul>
+        </div>
+        <!--lighting submenu-->
+        <div class="menu_general" id="menu_16">
+            <a href="#" id="left_arrow_16">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Lighting</p>
+            </a>
+            <hr class="hr_for_theme2">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Chandeliers</li>
+                </a>
+                <a href="#">
+                    <li>Wall Lights</li>
+                </a>
+                <a href="#">
+                    <li>Floor Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Smart Lights</li>
+                </a>
+                <a href="#">
+                    <li>Hanging Lights</li>
+                </a>
+                <a href="#">
+                    <li>Table Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Flush Mounts</li>
+                </a>
+                <a href="#">
+                    <li>Tea Light Holders</li>
+                </a>
+                <a href="#">
+                    <li>String Lights</li>
+                </a>
+                <a href="#">
+                    <li>Candle Holders</li>
+                </a>
+                <a href="#">
+                    <li>Picture Lights</li>
+                </a>
+            </ul>
+        </div>
+        <!--bedroom menu-->
+        <div class="menu_general" id="menu_17">
+            <a href="#" id="left_arrow_17">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Bedroom</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#" id="beds_right_arrow_2">
+                    <li class="first_component_ul">Beds<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="furnishing_right_arrow">
+                    <li>Furnishings<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="mattresses_right_arrow">
+                    <li>Mattresses<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="decor_right_arrow_1">
+                    <li>Decor<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="tables_right_arrow_1">
+                    <li>Tables<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="storage_right_arrow">
+                    <li>Storage<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="lighting_right_arrow_1">
+                    <li>Lighting<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+            </ul>
+        </div>
+        <!--bed submenu-->
+        <div class="menu_general" id="menu_18">
+            <a href="#" id="left_arrow_18">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Beds</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Single Beds</li>
+                </a>
+                <a href="#">
+                    <li>Queen Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>King Size Beds</li>
+                </a>
+                <a href="#">
+                    <li>Upholstered Beds</li>
+                </a>
+                <a href="#">
+                    <li>Poster Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bunk Beds</li>
+                </a>
+                <a href="#">
+                    <li>Trudle Beds</li>
+                </a>
+                <a href="#">
+                    <li>Folding Beds</li>
+                </a>
+                <a href="#">
+                    <li>Sofa Cum Beds</li>
+                </a>
+            </ul>
+        </div>
+        <!--furnishing submenu-->
+        <div class="menu_general" id="menu_19">
+            <a href="#" id="left_arrow_19">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Furnishings</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Bed Sheets</li>
+                </a>
+                <a href="#">
+                    <li>Bed Covers</li>
+                </a>
+                <a href="#">
+                    <li>Bedding Sets</li>
+                </a>
+                <a href="#">
+                    <li>Duvets</li>
+                </a>
+                <a href="#">
+                    <li>Quilts & Comforters</li>
+                </a>
+                <a href="#">
+                    <li>Blankets</li>
+                </a>
+                <a href="#">
+                    <li>Dohars</li>
+                </a>
+                <a href="#">
+                    <li>Carpets</li>
+                </a>
+                <a href="#">
+                    <li>Runners</li>
+                </a>
+                <a href="#">
+                    <li>Curtains & Drapers</li>
+                </a>
+            </ul>
+        </div>
+        <!--mattresses submenu-->
+        <div class="menu_general" id="menu_20">
+            <a href="#" id="left_arrow_20">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Mattresses</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Single Bed Mattress</li>
+                </a>
+                <a href="#">
+                    <li>Queen Bed Mattress</li>
+                </a>
+                <a href="#">
+                    <li>King Bed Mattress</li>
+                </a>
+                <a href="#">
+                    <li>Foldable Mattress</li>
+                </a>
+                <a href="#">
+                    <li>Kids Mattress</li>
+                </a>
+                <a href="#">
+                    <li>Baby Mattress</li>
+                </a>
+                <a href="#">
+                    <li>Mattress Protector</li>
+                </a>
+                <a href="#">
+                    <li>Mattress Toppers</li>
+                </a>
+                <a href="#">
+                    <li>Pillows</li>
+                </a>
+                <a href="#">
+                    <li>Bed Wedges</li>
+                </a>
+            </ul>
+        </div>
+        <!--decor submenu-->
+        <div class="menu_general" id="menu_21">
+            <a href="#" id="left_arrow_21">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Decor</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Mirrors</li>
+                </a>
+                <a href="#">
+                    <li>Photo Frames</li>
+                </a>
+                <a href="#">
+                    <li>Wall Art</li>
+                </a>
+                <a href="#">
+                    <li>Wall Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Table Decor</li>
+                </a>
+            </ul>
+        </div>
+        <!--table submenu-->
+        <div class="menu_general" id="menu_22">
+            <a href="#" id="left_arrow_22">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Tables</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Bedside Tables</li>
+                </a>
+                <a href="#">
+                    <li>Study Tables</li>
+                </a>
+                <a href="#">
+                    <li>Portable Tables</li>
+                </a>
+                <a href="#">
+                    <li>Dressing Table</li>
+                </a>
+            </ul>
+        </div>
+        <!--storage submenu-->
+        <div class="menu_general" id="menu_23">
+            <a href="#" id="left_arrow_23">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Storage</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Wardrobes</li>
+                </a>
+                <a href="#">
+                    <li>Modular Wardrobes</li>
+                </a>
+                <a href="#">
+                    <li>Chest of Drawers</li>
+                </a>
+                <a href="#">
+                    <li>Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Entertainment Units</li>
+                </a>
+                <a href="#">
+                    <li>Trunks</li>
+                </a>
+                <a href="#">
+                    <li>Book Cases</li>
+                </a>
+                <a href="#">
+                    <li>Book Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Plastic Cabinets</li>
+                </a>
+            </ul>
+        </div>
+        <!--lighting submenu-->
+        <div class="menu_general" id="menu_24">
+            <a href="#" id="left_arrow_24">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Lighting</p>
+            </a>
+            <hr class="hr_for_theme3">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Wall Lights</li>
+                </a>
+                <a href="#">
+                    <li>Table Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Smart Lights</li>
+                </a>
+                <a href="#">
+                    <li>Study Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Hanging Lights</li>
+                </a>
+                <a href="#">
+                    <li>Floor Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Candles</li>
+                </a>
+                <a href="#">
+                    <li>Candle Holders</li>
+                </a>
+                <a href="#">
+                    <li>Flush Mounts</li>
+                </a>
+                <a href="#">
+                    <li>Panel Lights</li>
+                </a>
+                <a href="#">
+                    <li>Smart Combos</li>
+                </a>
+                <a href="#">
+                    <li>Smart Devices</li>
+                </a>
+            </ul>
+        </div>
+        <!--kidsroom menu-->
+        <div class="menu_general" id="menu_25">
+            <a href="#" id="left_arrow_25">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Kids Room</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#" id="beds_right_arrow_3">
+                    <li class="first_component_ul">Beds<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="study_right_arrow">
+                    <li>Study<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="storage_right_arrow_1">
+                    <li>Storage<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="seating_right_arrow_2">
+                    <li>Seating<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="decor_right_arrow_2">
+                    <li>Decor<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="bedding_right_arrow_1">
+                    <li>Bedding<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="furnishings_right_arrow_1">
+                    <li>Furnishings<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+            </ul>
+        </div>
+        <!--bed submenu-->
+        <div class="menu_general" id="menu_26">
+            <a href="#" id="left_arrow_26">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Beds</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Cribs</li>
+                </a>
+                <a href="#">
+                    <li>Panel Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bunk Beds</li>
+                </a>
+                <a href="#">
+                    <li>Loft Beds</li>
+                </a>
+                <a href="#">
+                    <li>Trundle Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bookcase Beds</li>
+                </a>
+                <a href="#">
+                    <li>Novelty Beds</li>
+                </a>
+                <a href="#">
+                    <li>Tent Beds</li>
+                </a>
+                <a href="#">
+                    <li>Bed Units</li>
+                </a>
+                <a href="#">
+                    <li>Bedside Tables</li>
+                </a>
+            </ul>
+        </div>
+        <!--study submenu-->
+        <div class="menu_general" id="menu_27">
+            <a href="#" id="left_arrow_27">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Study</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Study Tables</li>
+                </a>
+                <a href="#">
+                    <li>Infant Desks</li>
+                </a>
+                <a href="#">
+                    <li>Study Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Activity Tables</li>
+                </a>
+                <a href="#">
+                    <li>Pin Boards</li>
+                </a>
+                <a href="#">
+                    <li>Writing Boards</li>
+                </a>
+                <a href="#">
+                    <li>Art Easels</li>
+                </a>
+            </ul>
+        </div>
+        <!--storage submenu-->
+        <div class="menu_general" id="menu_28">
+            <a href="#" id="left_arrow_28">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Storage</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Book Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Bookcases</li>
+                </a>
+                <a href="#">
+                    <li>Storage Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Chest of Drawers</li>
+                </a>
+                <a href="#">
+                    <li>Storage Baskets</li>
+                </a>
+                <a href="#">
+                    <li>Wardrobes</li>
+                </a>
+                <a href="#">
+                    <li>Fabric Wardrobes</li>
+                </a>
+            </ul>
+        </div>
+        <!--seating submenu-->
+        <div class="menu_general" id="menu_29">
+            <a href="#" id="left_arrow_29">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Seating</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Study Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Infant Chairs</li>
+                </a>
+                <a href="#">
+                    <li>Rockers</li>
+                </a>
+                <a href="#">
+                    <li>Sofas</li>
+                </a>
+                <a href="#">
+                    <li>Stools</li>
+                </a>
+                <a href="#">
+                    <li>Bean Bags</li>
+                </a>
+            </ul>
+        </div>
+        <!--decor submenu-->
+        <div class="menu_general" id="menu_30">
+            <a href="#" id="left_arrow_30">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Decor</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Wall Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Book Ends</li>
+                </a>
+                <a href="#">
+                    <li>Wall Arts</li>
+                </a>
+                <a href="#">
+                    <li>Study Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Bedside Lamps</li>
+                </a>
+                <a href="#">
+                    <li>Wall Lights</li>
+                </a>
+                <a href="#">
+                    <li>Wall Clocks</li>
+                </a>
+                <a href="#">
+                    <li>Table Clocks</li>
+                </a>
+                <a href="#">
+                    <li>Wall Stickers</li>
+                </a>
+                <a href="#">
+                    <li>Posters</li>
+                </a>
+                <a href="#">
+                    <li>Height Charts</li>
+                </a>
+            </ul>
+        </div>
+        <!--bedding submenu-->
+        <div class="menu_general" id="menu_31">
+            <a href="#" id="left_arrow_31">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Beddings</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Baby Wraps</li>
+                </a>
+                <a href="#">
+                    <li>Bed Sheets</li>
+                </a>
+                <a href="#">
+                    <li>Blankets</li>
+                </a>
+                <a href="#">
+                    <li>Pillows</li>
+                </a>
+                <a href="#">
+                    <li>Mattresses</li>
+                </a>
+            </ul>
+        </div>
+        <!--furnishings submenu-->
+        <div class="menu_general" id="menu_32">
+            <a href="#" id="left_arrow_32">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Furnishings</p>
+            </a>
+            <hr class="hr_for_theme4">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Cushion Covers</li>
+                </a>
+                <a href="#">
+                    <li>Curtains</li>
+                </a>
+                <a href="#">
+                    <li>Carpets</li>
+                </a>
+                <a href="#">
+                    <li>Floor Mats</li>
+                </a>
+                <a href="#">
+                    <li>Towels</li>
+                </a>
+            </ul>
+        </div>
+        <!--decor menu-->
+        <div class="menu_general" id="menu_33">
+            <a href="#" id="left_arrow_33">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Decor</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#" id="wall_accents_right_arrow">
+                    <li class="first_component_ul">Wall Accents<span class="material-icons">keyboard_arrow_right</span>
+                    </li>
+                </a>
+                <a href="#" id="wall_arts_right_arrow">
+                    <li>Wall Arts<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="table_decor_right_arrow">
+                    <li>Table Decor<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="spiritual_right_arrow">
+                    <li>Spiritual<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="home_garden_right_arrow">
+                    <li>Home Garden<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+                <a href="#" id="clearance_sale_right_arrow">
+                    <li>Clearance Sale<span class="material-icons">keyboard_arrow_right</span></li>
+                </a>
+            </ul>
+        </div>
+        <!--wall accent submenu-->
+        <div class="menu_general" id="menu_34">
+            <a href="#" id="left_arrow_34">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Wall Accents</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Wall Cabinets</li>
+                </a>
+                <a href="#">
+                    <li>Mirrors</li>
+                </a>
+                <a href="#">
+                    <li>Clocks</li>
+                </a>
+                <a href="#">
+                    <li>Screen & Dividers</li>
+                </a>
+                <a href="#">
+                    <li>Photo Frames</li>
+                </a>
+                <a href="#">
+                    <li>Key Holders</li>
+                </a>
+                <a href="#">
+                    <li>Magazine Holders</li>
+                </a>
+                <a href="#">
+                    <li>Setup Holders</li>
+                </a>
+            </ul>
+        </div>
+        <!--wall arts submenu-->
+        <div class="menu_general" id="menu_35">
+            <a href="#" id="left_arrow_35">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Wall Arts</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Metal Wall Arts</li>
+                </a>
+                <a href="#">
+                    <li>Wooden Wall Arts</li>
+                </a>
+                <a href="#">
+                    <li>Wall Murals</li>
+                </a>
+                <a href="#">
+                    <li>Wall Plates</li>
+                </a>
+                <a href="#">
+                    <li>Wall Tiles</li>
+                </a>
+                <a href="#">
+                    <li>Original Paintings</li>
+                </a>
+                <a href="#">
+                    <li>Art Panels</li>
+                </a>
+                <a href="#">
+                    <li>Art Prints</li>
+                </a>
+                <a href="#">
+                    <li>Ethnic Art</li>
+                </a>
+                <a href="#">
+                    <li>Wall Masks</li>
+                </a>
+                <a href="#">
+                    <li>Faux Animal Busts</li>
+                </a>
+            </ul>
+        </div>
+        <!--Table decor submenu-->
+        <div class="menu_general" id="menu_36">
+            <a href="#" id="left_arrow_36">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Table Decor</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Vases</li>
+                </a>
+                <a href="#">
+                    <li>Table Clocks</li>
+                </a>
+                <a href="#">
+                    <li>Table Photo Frames</li>
+                </a>
+                <a href="#">
+                    <li>Figurines</li>
+                </a>
+                <a href="#">
+                    <li>Transport Decor</li>
+                </a>
+                <a href="#">
+                    <li>Nautical Decor</li>
+                </a>
+                <a href="#">
+                    <li>Monuments Decor</li>
+                </a>
+                <a href="#">
+                    <li>Vintage Decor</li>
+                </a>
+                <a href="#">
+                    <li>Military Decor</li>
+                </a>
+                <a href="#">
+                    <li>Plates & Trays</li>
+                </a>
+            </ul>
+        </div>
+        <!--spiritual submenu-->
+        <div class="menu_general" id="menu_37">
+            <a href="#" id="left_arrow_37">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Spiritual</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Mandir</li>
+                </a>
+                <a href="#">
+                    <li>Pooja Shelves</li>
+                </a>
+                <a href="#">
+                    <li>Religious Idols</li>
+                </a>
+                <a href="#">
+                    <li>Religious Frames</li>
+                </a>
+                <a href="#">
+                    <li>Chowkies</li>
+                </a>
+                <a href="#">
+                    <li>Bells</li>
+                </a>
+                <a href="#">
+                    <li>Feng Shui</li>
+                </a>
+                <a href="#">
+                    <li>Pooja Essentials</li>
+                </a>
+                <a href="#">
+                    <li>Festive Decor</li>
+                </a>
+                <a href="#">
+                    <li>Table Mats</li>
+                </a>
+            </ul>
+        </div>
+        <!--home garden submenu-->
+        <div class="menu_general" id="menu_38">
+            <a href="#" id="left_arrow_38">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Home Garden</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Pots & Planters</li>
+                </a>
+                <a href="#">
+                    <li>Natural Plants</li>
+                </a>
+                <a href="#">
+                    <li>Artifical Plants</li>
+                </a>
+                <a href="#">
+                    <li>Artifical Flowers</li>
+                </a>
+                <a href="#">
+                    <li>Artifical Grass</li>
+                </a>
+                <a href="#">
+                    <li>Indoor Foutains</li>
+                </a>
+                <a href="#">
+                    <li>Decorative Pebbles</li>
+                </a>
+                <a href="#">
+                    <li>Garden Figurines</li>
+                </a>
+                <a href="#">
+                    <li>Bird Houses</li>
+                </a>
+            </ul>
+        </div>
+        <!--clearance sale submenu-->
+        <div class="menu_general" id="menu_39">
+            <a href="#" id="left_arrow_39">
+                <p class="sub_menu_heading"><span class="material-icons">keyboard_arrow_left</span>Clearance Sale</p>
+            </a>
+            <hr class="hr_for_theme5">
+            <ul>
+                <a href="#">
+                    <li class="first_component_ul">Decor</li>
+                </a>
+                <a href="#">
+                    <li>Homeware</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- navbar for screens smaller than lg ends here -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 d-none d-md-block image-container"></div>
+
+        <div class="col-lg-5 col-md-5 form-container">
+            <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+                <br><br>
+                <form onsubmit="return validateLogin()" action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-input">
+                        <label for="email"><span><i class="fa fa-envelope" aria-hidden="true"></i></span></label>&nbsp
+                        <input type="email" name="email" placeholder="Email" id="email">
+                        <br>
+                    </div>
+                    <div class="form-input">
+                        <label for="passw"><span><i class="fa fa-lock" aria-hidden="true"></i></span></label>&nbsp
+                        <input type="password" name="password" placeholder="Password" id="passw"><span
+                            style="right: 20px; color: black; cursor: pointer;"><i class="far fa-eye showpwd"
+                                                                                   onClick="showPwd('passw', this)"></i></span>
+                        <br>
+                    </div>
+
+                    <br>
+                    <div>
+                        <button type="submit" class="btn hhh">Login</button>
+                    </div>
+
+                </form>
+                <p class="forgetpass"><a href="#"><u style="color: rgb(247, 46, 46);">Forgot Password?</u></a></p>
+
+                {% for message in messages %}
+                <p id="message" style="color: red;"> {{message}} </p>
+                {% endfor %}
+
+                <script>
+                    val = document.getElementById("message").value;
+                    if(val!="Complete OTP Confirmation" && val!="Enter correct credentials"){
+                        document.getElementById("message").style.display="none";
+                    }
+                </script>
+
+                <br>
+                <div>
+                    <a href="/accounts/signup" class="existinguser">
+                        <button type="button" class="btn"><p>New? Register Here</p></button>
+                    </a>
+                </div>
+
+                <p class="continuewith">or continue with <a href="{% provider_login_url 'google' %}"><img
+                        class="googlelogo"
+                        src="{% static 'accounts/card_images/google.png' %}"
+                        alt=""></a> <a href="{% provider_login_url 'facebook' method='js_sdk' %}"><i
+                        class='fab fa-facebook facebooklogo'></i></a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="{% static 'accounts/javascript/login.js' %}"></script>
+<script src="{% static 'accounts/javascript/jquery.js' %}"></script>
+<script src="{% static 'accounts/javascript/home.js' %}"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</body>
+</html>
